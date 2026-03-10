@@ -1,0 +1,18 @@
+name: Hola Mundo Workflow Ej1
+
+on: 
+    push:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Paso Hola Bryan
+              run: echo "Hola Bryan desde GitHub Actions"
+
+            - name: Debug
+              run: |
+                echo "Debugging: GITHUB_REF: ${{github.ref}}"
+                echo "Debugging: RUNNER_OS: ${{ runner.os}}"
